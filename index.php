@@ -69,7 +69,6 @@
 
         img {
             width: 200px;
-            margin-left: 16rem
         }
 
         #myVideo {
@@ -93,9 +92,8 @@
 
         <div class="row ">
             <div class="col-lg-7 mx-auto">
-                <div class="card mt-2 mx-auto p-4 bg-light">
-                    <div class="card-body bg-ligth">
-
+                <div class="card mt-2 mx-auto py-4 bg-light">
+                    <div class="card-body px-1 bg-ligth">
                         <div class="container">
                             <h1>Welcome to the party baby!</h1>
                             <form id="contact-form" role="form" action="cadastro.php" method="post">
@@ -115,7 +113,6 @@
                                         </div>
                                     </div>
                                     <div class="row">
-
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="form_need">Selecione sua Bebida Principal</label>
@@ -126,9 +123,9 @@
                                                     <option>Whysk</option>
                                                     <option>Ernegetico</option>
                                                 </select>
-
                                             </div>
                                         </div>
+                                        
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="form_need">Selecione sua Bebida acompanhante</label>
@@ -139,7 +136,6 @@
                                                     <option>Whysk</option>
                                                     <option>Ernegetico</option>
                                                 </select>
-
                                             </div>
                                         </div>
                                     </div>
@@ -151,22 +147,23 @@
                                             </div>
                                         </div>
 
-                                        <div class="foto">
+                                        <div class="d-flex flex-column flex-md-row my-2">
+                                            <div class="col-md-6 my-auto">
+                                                <h5 class="text-center">
+                                                    Faça seu pix aqui!
+                                                    <span class="d-none d-md-inline">&#8594;</span> 
+                                                    <span class="d-md-none d-xs-inline">&#8595;</span> 
+                                                </h5>
+                                            </div>
 
-                                            <table>
-                                                <tr>
-                                                    <td>
-                                                        <h5>Faça seu pix aqui-></h5>
-                                                    </td>
-                                                    <td>
-                                                        <img src="codigo.jpg" alt="">
-                                                    </td>
-                                                </tr>
-                                            </table>
-
+                                            <div class="col-md-6 mx-auto text-center">
+                                                <img src="codigo.jpg" alt="">
+                                            </div>
                                         </div>
 
-                                        <input type="submit" class="btn btn-primary btn-send" value="Confirmar Presença">
+                                        <button type="submit" class="btn btn-primary btn-send">
+                                            Confirmar Presença
+                                        </button>
                                     </div>
                                 </div>
                             </form>
