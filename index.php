@@ -77,6 +77,19 @@
             bottom: 0;
             min-width: 100%;
             min-height: 100%;
+            z-index: -2;
+        }
+
+        body {
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            inset: 0;
+            position: fixed;
+            z-index: -1;
+            background-color: rgba(0%, 0%, 0%, 0.5);
         }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -92,19 +105,20 @@
 
         <div class="row ">
             <div class="col-lg-7 mx-auto">
-                <div class="card mt-2 mx-auto py-4 bg-light">
-                    <div class="card-body px-1 bg-ligth">
+                <div class="card mx-auto py-0 bg-light">
+                    <div class="card-body pt-0 px-md-4 px-1 bg-ligth">
                         <div class="container">
-                            <h1>Welcome to the party baby!</h1>
+                            <h1>Welcome to the party, baby!</h1>
                             <form id="contact-form" role="form" action="cadastro.php" method="post">
                                 <div class="controls">
-                                    <div class="row">
+                                    <div class="row gy-3 mb-3">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="form_name">Seu Nome</label>
                                                 <input id="form_name" type="text" name="name" class="form-control" placeholder="Coloca seu nome aqui pf..." required="required" data-error="Firstname is required.">
                                             </div>
                                         </div>
+
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="form_lastname">Convidado</label>
@@ -112,10 +126,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row gy-3 mb-3">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="form_need">Selecione sua Bebida Principal</label>
+                                                <label for="form_need">Bebida Principal</label>
                                                 <select id="form_need" name="bebida1" class="form-control" required="required" data-error="Please specify your need.">
                                                     <option value="" selected disabled>--Bebida 1--</option>
                                                     <option>Vodka</option>
@@ -128,7 +142,7 @@
                                         
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="form_need">Selecione sua Bebida acompanhante</label>
+                                                <label for="form_need">Acompanhamento</label>
                                                 <select id="form_need" name="bebida2" class="form-control" required="required" data-error="Please specify your need.">
                                                     <option value="" selected disabled>--Bebida 2--</option>
                                                     <option>Vodka</option>
@@ -139,7 +153,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+
+                                    <div class="row gy-3">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="form_message">Deixe um Recadinho XD</label>
@@ -147,25 +162,26 @@
                                             </div>
                                         </div>
 
-                                        <div class="d-flex flex-column flex-md-row my-2">
+                                        <div class="d-flex flex-column align-items-center my-4">
                                             <div class="col-md-6 my-auto">
-                                                <h5 class="text-center">
+                                                <h5 class="text-center px-2 p-1">
                                                     Faça seu pix aqui!
-                                                    <span class="d-none d-md-inline">&#8594;</span> 
-                                                    <span class="d-md-none d-xs-inline">&#8595;</span> 
+                                                    <!-- <span class="d-none d-md-inline">&#8594;</span>  -->
+                                                    <span class="">&#8595;</span> 
                                                 </h5>
                                             </div>
 
-                                            <div class="col-md-6 mx-auto text-center">
+                                            <div class="col-md-6 text-center">
                                                 <img src="codigo.jpg" alt="">
                                             </div>
                                         </div>
-
-                                        <button type="submit" class="btn btn-primary btn-send">
-                                            Confirmar Presença
-                                        </button>
                                     </div>
                                 </div>
+
+
+                                <button type="submit" class="btn d-block btn-primary btn-send mx-auto">
+                                    Confirmar Presença
+                                </button>
                             </form>
                         </div>
                     </div>
